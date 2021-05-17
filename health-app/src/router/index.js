@@ -1,20 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Bio',
-    component: Home
+    name: 'Home',
+    component: () => import('@/views/Home.vue'),
   },
 
   {
     path: '/measurement',
     name: 'Measurement',
-    component: () => import('../views/Measurement.vue'),
+    component: () => import('@/views/Measurement.vue'),
+    children: [
+      {
+        path: 'bloodpressure',
+        name: 'Bloodpressure',
+        component: () => import('@/components/BloodPressure.vue'),
+      },
+    
+      {
+        path: 'glycaemia',
+        name: 'Glycaemia',
+        component: () => import('@/components/Glycaemia.vue'),
+      },
+    
+      {
+        path: 'heartrate',
+        name: 'HeartRate',
+        component: () => import('@/components/HeartRate.vue'),
+      },
+    ],
   },
 ]
 

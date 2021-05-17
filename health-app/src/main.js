@@ -3,9 +3,12 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import "materialize-css/dist/css/materialize.min.css";
+import 'materialize-css/dist/css/materialize.min.css';
+import Chart from 'vue-chartjs';
 
-Vue.config.productionTip = false
+Vue.use(Chart);
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
