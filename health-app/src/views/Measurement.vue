@@ -1,6 +1,6 @@
 <template>
   <div class="bio">
-    <h1>Measurement</h1>
+    <h1>Измерения</h1>
     <div class="input-field col s12">
         <Select />
     </div>

@@ -28,9 +28,9 @@
     data() {
         return {
             links: [
-                {title: 'Bloodpressure', url: '/measurement/bloodpressure'},
-                {title: 'Glycaemia', url: '/measurement/glycaemia'},
-                {title: 'HeartRate', url: '/measurement/heartrate'},
+                {title: 'Кровяное давление', url: '/measurement/bloodpressure'},
+                {title: 'Глюкоза крови', url: '/measurement/glycaemia'},
+                {title: 'Частота сердечных сокращений', url: '/measurement/heartrate'},
             ]
         }
     },
@@ -52,26 +52,29 @@
 
     .input-field .container {
         margin: 0;
+        margin-left: -17px;
     }
 
     .procedures-wrapper{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
-        margin-left: -30px;
+        margin-left: 0;
     }
 
     .procedure-block{
         width: calc(33.33% - 30px);
         margin-left: 30px;
-        min-width: 200px;
+        min-width: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-        padding: 30px;
+        padding: 20px 30px;
+        margin-bottom: 30px;
         background-color: blue;
         color: white;
+        text-align: center;
     }
 
     .procedure-link {

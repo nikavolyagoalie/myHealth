@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Кровяное давление</h2>
+    <h3>Кровяное давление</h3>
     <form class="col s12" action="#">
       <div class="row">
         <div class="col s4 field systolity">
@@ -11,8 +11,8 @@
           <input placeholder="DIA." id="diasystolity" name="diasystolity" type="text" class="validate" v-model="dia">
           <label for="diasystolity">Нижнее</label>
         </div>
-        <div class="col s4 btn">
-          <button @click.prevent="create">Добавить</button>
+        <div class="col s4 btn-wrapper">
+          <button @click.prevent="create" class="btn">Добавить</button>
         </div>
       </div>
     </form>
@@ -126,5 +126,14 @@ const baseUrl = 'https://609e63d433eed800179585e0.mockapi.io/api/pressure';
   .small{
     max-width: 630px;
     margin: 0;
+  }
+
+  .btn-wrapper{
+    position: relative;
+  }
+
+  .btn {
+    position: absolute;
+    top: 10px;
   }
 </style>

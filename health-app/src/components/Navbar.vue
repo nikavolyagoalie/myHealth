@@ -2,7 +2,7 @@
       <nav>
         <div class="container">
             <div class="nav-wrapper">
-                <router-link to="/" class="brand-logo">My Health</router-link>
+                <router-link to="/" class="brand-logo">Мое здоровье</router-link>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <router-link
                         v-for="link in links"
@@ -25,8 +25,8 @@ export default {
     data() {
         return {
             links: [
-                {title: 'Bio', url: '/', exact: true},
-                {title: 'Measurement', url: '/measurement', exact: false}
+                {title: 'Профиль', url: '/', exact: true},
+                {title: 'Измерения', url: '/measurement/bloodpressure', exact: false}
             ]
         }
     }
@@ -34,6 +34,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  nav {
+    background-color: #26a69a;  
+  }
+
   .input-field{
     & > label {
       top: -30px;

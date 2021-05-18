@@ -1,17 +1,12 @@
 <template>
   <div>
-    <input type="text" ref="datepicker">
+    
   </div>
 </template>
 
 <script>
   export default {      
-      mounted() {
-            //initialize datePicker
-            M.Datepicker.init(this.$refs.datepicker, {
-                
-            })
-      }
+      
   }
 </script>
 
