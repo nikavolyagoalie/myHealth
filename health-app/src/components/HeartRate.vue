@@ -66,8 +66,26 @@ const baseUrl = 'https://609e63d433eed800179585e0.mockapi.io/api/ccr';
           }
         }
 
+        const normalDates = labels.map(
+            function newDates(item){
+                const date = new Date(item * 1000);
+                let y = date.getFullYear();
+                let m = date.getMonth() + 1;
+                let d = date.getDate();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                m = (m < 10) ? '0' + m : m;
+                d = (d < 10) ? '0' + d : d;
+                hours = (hours < 10) ? '0' + hours : hours;
+                minutes = (minutes < 10) ? '0' + minutes : minutes;
+                
+                return [d, m, y, hours, minutes].join('-');
+                    
+            }
+        );
+
         this.visuals[0].chartData = {
-              labels: labels,
+              labels: normalDates,
               datasets: [
                 {
                   label: 'Пульс',
