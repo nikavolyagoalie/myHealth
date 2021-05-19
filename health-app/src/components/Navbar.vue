@@ -26,7 +26,7 @@ export default {
         return {
             links: [
                 {title: 'Профиль', url: '/', exact: true},
-                {title: 'Измерения', url: '/measurement/bloodpressure', exact: false}
+                {title: 'Измерения', url: '/measurement/bloodpressure', }
             ]
         }
     }

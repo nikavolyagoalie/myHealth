@@ -131,6 +131,7 @@ export default {
 
   .profile-item{
     padding: 0 .75rem;
+    color: #fff;
   }
 
   .active {
