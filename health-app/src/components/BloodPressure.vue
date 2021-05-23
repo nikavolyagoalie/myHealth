@@ -49,7 +49,10 @@ const baseUrl = 'https://609e63d433eed800179585e0.mockapi.io/api/pressure';
     mounted() {
       axios
         .get('https://609e63d433eed800179585e0.mockapi.io/api/pressure/')
-        .then(responce => {this.press_es = responce; this.updateVisuals()})
+        .then(responce => {
+          this.press_es = responce; 
+          this.updateVisuals()}
+        )
         .catch(error => {console.error("An API error: ", error)})
     },
 

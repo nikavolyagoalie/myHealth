@@ -39,13 +39,13 @@
           <div class="input-field col s6" v-if="change">
             <p>
                 <label>
-                  <input name="male" value="М" type="radio" v-model="sex"/>
+                  <input name="sex" value="М" type="radio" v-model="sex"/>
                   <span v-if="change">М</span>
                 </label>
               </p>
               <p>
                 <label>
-                  <input name="female" value="Ж" type="radio" v-model="sex"/>
+                  <input name="sex" value="Ж" type="radio" v-model="sex"/>
                   <span >Ж</span>
                 </label>
               </p>
